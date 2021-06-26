@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/vuesax.min.css" rel="stylesheet"/>
+        <link href="css/hmv.min.css" rel="stylesheet"/>
+        <link href="css/common.css" rel="stylesheet"/>
+        <script crossorigin="anonymous" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" src="https://code.jquery.com/jquery-3.6.0.min.js">
+        </script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js">
+        </script>
+        <!-- <link href="css/fontawesom.pro.css" rel="stylesheet"/> -->
+        <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" referrerpolicy="no-referrer" rel="stylesheet"/>
+        <meta content="initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        </meta>
+    </head>
+</html>
+<style type="text/css">
+    body{
+  background-color: #f8f8f8;
+}
+</style>
+<body data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true">
+    <div id="app">
+        <!-- Page wrapper -->
+        <div class="page-wrapper with-sidebar with-navbar with-navbar-fixed-bottom" data-sidebar-type="full-height overlayed-sm-and-down">
+            <!-- Sidebar overlay -->
+            <div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()">
+            </div>
+            <!-- Sidebar (immediate child of the page wrapper) -->
+            <div class="sidebar">
+                <div class="sidebar-menu">
+                    <!-- Sidebar brand -->
+                    <a class="sidebar-brand" href="/">
+                        <div class="x-logo">
+                            <span>
+                                X
+                            </span>
+                            ENEX
+                        </div>
+                    </a>
+                    <!-- Sidebar links and titles -->
+                    <h5 class="sidebar-title mt-20">
+                        Menu
+                    </h5>
+                    <div class="sidebar-divider">
+                    </div>
+                    <a class="sidebar-link active mactive" href="#">
+                        <h5>
+                            <i class="fa fa-home">
+                            </i>
+                            Home
+                        </h5>
+                    </a>
+                    <a class="sidebar-link" href="#">
+                        <h5>
+                            <i class="fa fa-envelope">
+                            </i>
+                            Messages
+                        </h5>
+                    </a>
+                    <a class="sidebar-link" href="#">
+                        <h5>
+                            <i class="fa fa-globe">
+                            </i>
+                            Discover
+                        </h5>
+                    </a>
+                    <a class="sidebar-link" href="#">
+                        <h5>
+                            <i class="fa fa-images">
+                            </i>
+                            Images
+                        </h5>
+                    </a>
+                    <h5 class="sidebar-title mt-20">
+                        Profile
+                    </h5>
+                    <div class="sidebar-divider">
+                    </div>
+                    <div class="sidebar-content d-flex thumbP">
+                        <img class="" height="65px" src="https://picsum.photos/50/50"/>
+                        <div style="display: inline;">
+                            <h5 class="m-0 ml-20">
+                                <b>
+                                    Shreyas
+                                </b>
+                            </h5>
+                            <h6 class="m-0 ml-20">
+                                @ninja
+                            </h6>
+                        </div>
+                    </div>
+                    <h5 class="sidebar-title mt-20">
+                        Others
+                    </h5>
+                    <div class="sidebar-divider">
+                    </div>
+                    <div class="sidebar-content d-flex thumbP">
+                        <img class="" height="65px" src="https://picsum.photos/50/51"/>
+                        <div style="display: inline;">
+                            <h5 class="m-0 ml-20">
+                                <b>
+                                    Neeta
+                                </b>
+                            </h5>
+                            <h6 class="m-0 ml-20">
+                                @ninja
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="sidebar-content d-flex thumbP">
+                        <img class="" height="65px" src="https://picsum.photos/51/50"/>
+                        <div style="display: inline;">
+                            <h5 class="m-0 ml-20">
+                                <b>
+                                    Rahul
+                                </b>
+                            </h5>
+                            <h6 class="m-0 ml-20">
+                                @ninja
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navbar (immediate child of the page wrapper) -->
+            <nav class="navbar">
+                <!-- Navbar content (with toggle sidebar button) -->
+                <div class="navbar-content">
+                    <vs-button circle="" class="p-10 " icon="" onclick="halfmoon.toggleSidebar()" transparent="">
+                        <i class="fa fa-bars">
+                        </i>
+                    </vs-button>
+                </div>
+                <!-- Navbar brand -->
+                <a class="navbar-brand hidden-md-and-up" href="/">
+                    <div class="x-logo ">
+                        <span>
+                            X
+                        </span>
+                        ENEX
+                    </div>
+                </a>
+                <!-- Navbar text -->
+                <!-- <span class="navbar-text text-monospace">
+                    v3.0
+                </span> -->
+                <!-- text-monospace = font-family shifted to monospace -->
+                <!-- Navbar nav -->
+                <ul class="navbar-nav d-none d-md-flex">
+                    <!-- d-none = display: none, d-md-flex = display: flex on medium screens and up (width > 768px) -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <h4 class="pt-15">
+                                Posts
+                            </h4>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Navbar form (inline form) -->
+                <div class="form-inline d-none d-md-flex ml-auto" method="...">
+                    <!-- d-none = display: none, d-md-flex = display: flex on medium screens and up (width > 768px), ml-auto = margin-left: auto -->
+                    <vs-button :active="active == 0" @click="active = 0" size="xl" transparent="">
+                        Photos
+                    </vs-button>
+                    <vs-button :active="active == 1" @click="active = 1" size="xl" transparent="">
+                        Videos
+                    </vs-button>
+                </div>
+                <!-- Navbar content (with the dropdown menu) -->
+                <div class="navbar-content d-md-none ml-auto">
+                    <!-- d-md-none = display: none on medium screens and up (width > 768px), ml-auto = margin-left: auto -->
+                    <div class="dropdown with-arrow">
+                        <button class="btn" data-toggle="dropdown" id="navbar-dropdown-toggle-btn-1" type="button">
+                            Posts
+                            <i aria-hidden="true" class="fa fa-angle-down">
+                            </i>
+                        </button>
+                        <div aria-labelledby="navbar-dropdown-toggle-btn-1" class="dropdown-menu dropdown-menu-right w-200">
+                            <vs-button :active="active == 0" @click="active = 0" size="xl" transparent="">
+                                Photos
+                            </vs-button>
+                            <vs-button :active="active == 1" @click="active = 1" size="xl" transparent="">
+                                Videos
+                            </vs-button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Content wrapper with static navbars -->
+            <div class="content-wrapper bgr">
+                <div class="continer-fluid">
+                    <div class="row">
+                        <div class="col-8 bgy">
+                            <div class="gridIso">
+                                <div class="grid-card">
+                                    <img class="imgrandom" src="https://picsum.photos/220"/>
+                                    
+                                </div>
+                                <div class="grid-card grid-item--width2">
+                                    <img class="imgrandom" src="https://picsum.photos/220"/>
+                                </div>
+                                <div class="grid-card">
+                                <img class="imgrandom" src="https://picsum.photos/220" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 h-full bgg">
+                            Hull
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navbar fixed bottom (immediate child of the page wrapper) -->
+            <nav class="navbar navbar-fixed-bottom p-20">
+                <!-- Navbar content with the dropup menu -->
+                <div class="navbar-content">
+                    <div class="dropdown dropup with-arrow">
+                        <vs-button circle="" class="p-10" data-toggle="dropdown" icon="" id="navbar-fixed-bottom-dropdown-toggle" size="xl" type="button">
+                            <i aria-hidden="true" class="fa fa-plus">
+                            </i>
+                        </vs-button>
+                        <div aria-labelledby="navbar-fixed-bottom-dropdown-toggle" class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                                <i aria-hidden="true" class="fa fa-plus">
+                                </i>
+                                <span class="ml-20">
+                                    Story
+                                </span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i aria-hidden="true" class="fa fa-plus">
+                                </i>
+                                <span class="ml-20">
+                                    Image
+                                </span>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i aria-hidden="true" class="fa fa-plus">
+                                </i>
+                                <span class="ml-20">
+                                    Reel
+                                </span>
+                            </a>
+                            <div class="dropdown-divider">
+                            </div>
+                            <a class="dropdown-item" href="#">
+                                <i aria-hidden="true" class="fa fa-plus">
+                                </i>
+                                <span class="ml-20">
+                                    Story Settings
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <vs-button circle="" data-toggle="dropdown" icon="" id="navbar-fixed-bottom-dropdown-toggle" size="xl" type="button">
+                    <i aria-hidden="true" class="fa fa-plus">
+                    </i>
+                </vs-button>
+                <vs-button circle="" data-toggle="dropdown" icon="" id="navbar-fixed-bottom-dropdown-toggle" size="xl" type="button">
+                    <i aria-hidden="true" class="fa fa-plus">
+                    </i>
+                </vs-button>
+                <vs-button circle="" data-toggle="dropdown" icon="" id="navbar-fixed-bottom-dropdown-toggle" size="xl" type="button">
+                    <i aria-hidden="true" class="fa fa-plus">
+                    </i>
+                </vs-button>
+                <vs-button circle="" data-toggle="dropdown" icon="" id="navbar-fixed-bottom-dropdown-toggle" size="xl" type="button">
+                    <i aria-hidden="true" class="fa fa-plus">
+                    </i>
+                </vs-button>
+                <vs-button circle="" data-toggle="dropdown" icon="" id="navbar-fixed-bottom-dropdown-toggle" size="xl" type="button">
+                    <i aria-hidden="true" class="fa fa-plus">
+                    </i>
+                </vs-button>
+            </nav>
+        </div>
+    </div>
+</body>
+<script src="js/vue.js">
+</script>
+<script src="js/vuesax.min.js">
+</script>
+<script src="js/index.js">
+</script>
+<script src="js/hm.min.js">
+</script>

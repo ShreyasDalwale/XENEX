@@ -1,0 +1,87 @@
+@font-face {
+    font-family: anurati;
+    src: url(fonts/Anurati.otf);
+}
+@font-face {
+    font-family: comfortaa;
+    src: url(fonts/comfortaa.ttf);
+}
+:root {
+    --inaccent: rgb(59, 59, 255);
+}
+*{
+	font-family: comfortaa;
+}
+.x-logo {
+    font-family: anurati;
+    letter-spacing: 10px;
+    transition-duration: 0.2s;
+    /*background-color: red;*/
+    width: 100%;
+    text-align: center;
+}
+.x-logo span {
+    color: var(--inaccent);
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    letter-spacing: 0px;
+}
+.x-logo:hover {
+    letter-spacing: 5px;
+}
+.imgrandom {
+    border-radius: 25px;
+    transition-duration: 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.imgrandom:hover {
+    -webkit-transform: translateY(-50px);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-50px)
+}
+
+.thumbP {
+    transition-duration: 0.5s;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+}
+.thumbP:hover {
+    -webkit-transform: translateY(15px);
+    transform: translateY(-15px)
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.thumP ,img{
+	    border-radius: 50%;
+
+}
+
+
+.mactive{
+	    box-shadow: 0 8px 8px 0 rgba(59, 59, 255, 0.4);
+}
+.con-content vs-input, vs-input-content {
+    width: 100%;
+}
+.vs-input {
+    width: 100%;
+}
+.con-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.vs-dialog__header{
+	/*padding: 0;*/
+}
+
+
+
+.mt-50{
+	margin-top: 50px;
+}
+
+.grid-card{
+	background-color: white;
+	border-radius: 25px;
+}

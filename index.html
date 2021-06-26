@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            XENEX
+        </title>
+    </head>
+    <body>
+        <button onclick="resetData()">
+            Clear
+        </button>
+        <script type="text/javascript">
+            // resetData()
+            if (localStorage.getItem("isFirstTime") == null) {
+          localStorage.setItem('isFirstTime',false)
+          window.location.replace("/setup.html")
+          // console.log("infirt")
+        } else {
+          console.log("inse")
+          window.location.replace("/home.html")
+            // setStyles();
+        }
+
+function resetData(){
+            localStorage.removeItem('isFirstTime')
+
+}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/hmv.min.css" rel="stylesheet"/>
+        <link href="css/vuesax.min.css" rel="stylesheet"/>
+        <link href="css/common.css" rel="stylesheet"/>
+        <meta content="initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+            <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" referrerpolicy="no-referrer" rel="stylesheet"/>
+        </meta>
+        <style type="text/css">
+            .col-xl-6{
+                height: 100vh;
+            }
+            .topbar{
+                height: 15vh
+            }
+            .vcenter {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+            }
+            .x-logo{
+                font-size: 60px;
+            }
+            .x-logo span {
+                font-size: 70px;
+            }
+            .subtit{
+                font-family: anurati;
+                font-size:25px;
+                margin: 50px 0;
+                color: #707070;
+            }
+        </style>
+    </head>
+</html>
+<body>
+    <div id="app">
+        <vs-dialog not-center="" v-model="active1" width="550px">
+            <template #header="">
+                <h4 class="">
+                    First Visit to
+                    <b>
+                        XENEX
+                    </b>
+                </h4>
+            </template>
+            <div class="con-content">
+                <p>
+                    It seems to be your first visit to
+                    <b>
+                        XENEX
+                    </b>
+                    so please configure some user details to customize it your taste.
+                </p>
+            </div>
+            <template #footer="">
+                <div class="con-footer">
+                    <vs-button @click="active1=false" size="xl" transparent="">
+                        OK
+                    </vs-button>
+                </div>
+            </template>
+        </vs-dialog>
+        <vs-dialog not-center="" v-model="active3" width="300px">
+            <template #header="">
+                <h4 class="">
+                    Welcome what is your
+                    <b>
+                        Name
+                    </b>
+                </h4>
+            </template>
+            <div class="con-content">
+                <vs-input label="Name" v-model="name">
+                </vs-input>
+                <vs-input class="mt-20" label="alias" v-model="alias">
+                </vs-input>
+            </div>
+            <template #footer="">
+                <div class="con-footer">
+                    <vs-button onclick="activeOK()" size="xl" transparent="">
+                        Ok
+                    </vs-button>
+                    <vs-button dark="" onclick="activeCancel()" size="xl" transparent="">
+                        Cancel
+                    </vs-button>
+                </div>
+            </template>
+        </vs-dialog>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-6 vcenter">
+                    <a class="sidebar-brand" href="/">
+                        <div class="x-logo">
+                            <span>
+                                X
+                            </span>
+                            ENEX
+                        </div>
+                    </a>
+                    <div class="subtit">
+                        Share Your Memories
+                        <br>
+                            With The World
+                        </br>
+                    </div>
+                    <vs-button @click="active3=!active3" size="xl">
+                        SETUP
+                        <i class="fa fa-arrow-right pl-10">
+                        </i>
+                    </vs-button>
+                </div>
+                <div class="col-xl-6 vcenter">
+                    <img class="imgrandom" src="https://picsum.photos/720" width="80%"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/vue.js">
+    </script>
+    <script src="js/vuesax.min.js">
+    </script>
+    <script>
+        var v = new Vue({
+        el: '#app',
+        data:{
+            num:5,
+            num2:5,
+            active1:false,
+            active3:false,
+            name:'Shreyas',
+            alias:'',
+        },
+        methods:{
+            
+        },
+        beforeMount() {
+        this.loading = this.$vs.loading()
+        window.addEventListener('DOMContentLoaded', () => {
+            // run after everything is in-place
+        })
+
+        // this.loading.close()
+
+    },
+    mounted() {
+        Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => {
+            img.onload = img.onerror = resolve;
+            this.loading.close()
+            this.active1 = true;
+        }))).then(() => {
+        });
+    }
+      })
+        console.log(v)
+        function activeOK(){
+          localStorage.setItem('xenexUName',""+v.name)
+          localStorage.setItem('xenexUAlias',"@"+v.alias)
+          v.active3 = false
+          console.log(localStorage.getItem('xenexUName'),localStorage.getItem('xenexUAlias'))
+            }
+            function activeCancel(){
+              v.active3 = false;
+            }
+    </script>
+</body>

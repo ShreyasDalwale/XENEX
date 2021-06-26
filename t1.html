@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body >
+
+      <vs-dialog width="550px" not-center v-model="active1">
+        <template #header>
+          <h4 class="not-margin">
+            Welcome to <b>Vuesax</b>
+          </h4>
+        </template>
+
+
+        <div class="con-content">
+          <p>
+            Vuesax is a relatively new framework with a refreshing design and in the latest trends, vuesax based on vuejs which means that we go hand in hand with one of the most popular javascript frameworks in the world and with a huge community with which you will have all the help and documentation to create and make your project
+          </p>
+        </div>
+
+        <template #footer>
+          <div class="con-footer">
+            <vs-button @click="active1=false" transparent>
+              Ok
+            </vs-button>
+          </div>
+        </template>
+      </vs-dialog>
+
+      <vs-dialog width="550px" not-center v-model="active2">
+        <template #header>
+          <h4 class="not-margin">
+            Welcome to <b>Vuesax</b>
+          </h4>
+        </template>
+
+
+        <div class="con-content">
+          <p>
+            Vuesax is a relatively new framework with a refreshing design and in the latest trends, vuesax based on vuejs which means that we go hand in hand with one of the most popular javascript frameworks in the world and with a huge community with which you will have all the help and documentation to create and make your project
+          </p>
+        </div>
+
+        <template #footer>
+          <div class="con-footer">
+            <vs-button @click="active2=false" transparent>
+              Ok
+            </vs-button>
+            <vs-button @click="active2=false" dark transparent>
+              Cancel
+            </vs-button>
+          </div>
+        </template>
+      </vs-dialog>
+
+      <vs-dialog width="300px" blur prevent-close v-model="active3">
+        <template #header>
+          <h4 class="not-margin">
+            Welcome what is your <b>Name</b>
+          </h4>
+        </template>
+
+
+        <div class="con-content">
+          <vs-input v-model="input1" style="width: 100%" placeholder="Name"></vs-input>
+          {{input1}}
+        </div>
+
+        <template #footer>
+          <div class="con-footer">
+            <vs-button @click="active3=false" transparent>
+              Ok
+            </vs-button>
+            <vs-button @click="active3=false" dark transparent>
+              Cancel
+            </vs-button>
+          </div>
+        </template>
+      </vs-dialog>
+
+      <vs-button @click="active1=!active1">
+        Alert
+      </vs-button>
+      <vs-button flat @click="active2=!active2">
+        Confirm
+      </vs-button>
+      <vs-button border @click="active3=!active3">
+        Prompt
+      </vs-button>
+      <vs-button border @click="resetLS()">
+        Reset
+      </vs-button>
+
+ <div class="center">
+
+</div>
+<vs-tooltip>
+        <vs-button flat>
+          Do hover here
+        </vs-button>
+        <template #tooltip>
+          This is a beautiful button
+        </template>
+      </vs-tooltip>
+<div class="center">Meaea</div>
+ <div class="center con-selects">
+      <vs-select
+        filter
+        placeholder="Filter"
+        state="primary"
+        v-model="value"
+      >
+        <vs-option label="Vuesax" value="1" >
+          Vuesax
+        </vs-option>
+        <vs-option label="Vue" value="2">
+          Vue
+        </vs-option>
+        <vs-option label="Javascript" value="3">
+          Javascript
+        </vs-option>
+        <vs-option label="Sass" value="4">
+          Sass
+        </vs-option>
+        <vs-option label="Typescript" value="5">
+          Typescript
+        </vs-option>
+        <vs-option label="Webpack" value="6">
+          Webpack
+        </vs-option>
+        <vs-option label="Nodejs" value="7">
+          Nodejs
+        </vs-option>
+      </vs-select>
+      <vs-select
+        filter
+        multiple
+        placeholder="Filter Multiple"
+        v-model="value2"
+      >
+        <vs-option label="Vuesax" value="1">
+          Vuesax
+        </vs-option>
+        <vs-option label="Vue" value="2">
+          Vue
+        </vs-option>
+        <vs-option label="Javascript" value="3">
+          Javascript
+        </vs-option>
+        <vs-option label="Sass" value="4">
+          Sass
+        </vs-option>
+        <vs-option label="Typescript" value="5">
+          Typescript
+        </vs-option>
+        <vs-option label="Webpack" value="6">
+          Webpack
+        </vs-option>
+        <vs-option label="Nodejs" value="7">
+          Nodejs
+        </vs-option>
+      </vs-select>
+    </div>
+
+
+          <vs-alert></vs-alert>
+          <vs-card></vs-card>
+
+            <vs-button id="MI" @click="openNotification">
+                Hello World
+            </vs-button>
+</body>
+</html>
